@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:width="35dp"
+        android:height="35dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/coreColor"/>
+        </shape>
+    </item>
+    <item
+        android:width="30dp"
+        android:height="30dp"
+        android:gravity="center">
+        <shape android:shape="oval">
+            <solid android:color="@color/white"/>
+        </shape>
+    </item>
+    <item
+        android:drawable="@drawable/ic_add_alarm"
+        android:width="20dp"
+        android:height="20dp"
+        android:gravity="center">
+    </item>
+</layer-list>

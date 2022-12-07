@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+    <include layout="@layout/toolbar_main"
+        android:id="@+id/toolBar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar"
+        android:id="@+id/tempShow"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/circle_bg"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/btn_button_shape"
+            android:elevation="30dp"
+            android:gravity="center"
+            android:outlineSpotShadowColor="@color/coreColor">
+
+            <RelativeLayout
+                android:id="@+id/txtTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tempOutput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text=""
+                    android:textColor="@color/coreColor"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/tempOutput"
+                    android:text="°C"
+                    android:textColor="@color/coreColor"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTemp"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/txtRoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Room"
+                    android:textColor="@color/PrimaryColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtRoom"
+                    android:layout_centerHorizontal="true"
+                    android:text="Temperature"
+                    android:textColor="@color/PrimaryColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempShow"
+        android:layout_marginTop="0dp">
+
+        <TextView
+            android:id="@+id/txtButtonOption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Options"
+            android:textColor="#686568"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btnOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtButtonOption"
+            android:layout_marginTop="20dp">
+
+<!--            <FrameLayout-->
+<!--                android:id="@+id/frame_onoff"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:background="@drawable/btn_mode_shape"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/frame_manual"-->
+<!--                app:layout_constraintHorizontal_bias="0.5"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/btnOnOff"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:background="@drawable/btncircle"-->
+<!--                    android:src="@drawable/ic_on" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textOff"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginTop="25dp"-->
+<!--                    android:clickable="false"-->
+<!--                    android:text="Off"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--            </FrameLayout>-->
+
+
+<!--            <FrameLayout-->
+<!--                android:id="@+id/frame_manual"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/btn_mode_shape"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/frame_auto"-->
+<!--                app:layout_constraintHorizontal_bias="0.5"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/frame_onoff"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/btnManual"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:background="@drawable/btncircle"-->
+<!--                    android:src="@drawable/ic_manual" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textManual"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="20dp"-->
+<!--                    android:layout_below="@+id/ic_manual"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginTop="25dp"-->
+<!--                    android:clickable="false"-->
+<!--                    android:text="Manual"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--            </FrameLayout>-->
+
+<!--            <FrameLayout-->
+<!--                android:id="@+id/frame_auto"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/btn_mode_shape"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.5"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/frame_manual"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/btnAuto"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:background="@drawable/btncircle"-->
+<!--                    android:src="@drawable/ic_auto" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textAuto"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/ic_auto"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginTop="25dp"-->
+<!--                    android:clickable="false"-->
+<!--                    android:text="Auto"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--            </FrameLayout>-->
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnOnOff"
+                            android:layout_width="120dp"
+                            android:layout_height="130dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/selector_btn_common"
+                            android:drawableTop="@drawable/icon_on"
+                            android:gravity="center"
+                            android:paddingTop="10dp"
+                            android:text="Off"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            app:iconGravity="textStart"
+                            app:layout_constraintEnd_toStartOf="@+id/btnManual"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnManual"
+                            android:layout_width="120dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/selector_btn_common"
+                            android:drawableTop="@drawable/icon_manual"
+                            android:elevation="10dp"
+                            android:paddingTop="10dp"
+                            android:text="Manual"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            app:iconGravity="textStart"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/btnAuto"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/btnOnOff" />
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnAuto"
+                            android:layout_width="120dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/selector_btn_common"
+                           android:drawableTop="@drawable/icon_auto"
+                            android:elevation="10dp"
+                            android:paddingTop="10dp"
+                            android:text="Auto"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            app:iconGravity="textStart"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/btnManual" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <RelativeLayout
+            android:id="@+id/speedChange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnOption">
+            <TextView
+                android:id="@+id/txtAdjust"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:text="Speed adjustment"
+                android:textColor="#686568"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAdjust"
+                android:layout_margin="20dp">
+
+                <SeekBar
+                    android:id="@+id/sbChange"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/txtAdjust"
+                    android:layout_gravity="center"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar"
+                    android:thumb="@drawable/thumb"/>
+
+
+            </FrameLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/timer_bg"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp">
+
+            <TextView
+                android:id="@+id/txtHour"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:text="00"
+                android:textAlignment="center"
+                android:textColor="@color/coreColor"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/texthour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtHour"
+                android:layout_centerHorizontal="true"
+                android:text="hour"
+                android:textColor="@color/black"
+                android:textSize="10sp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text=":"
+            android:textAlignment="center"
+            android:textColor="@color/coreColor"
+            android:textSize="45sp" />
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="70dp">
+
+            <TextView
+                android:id="@+id/txtMinute"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:text="00"
+                android:textAlignment="center"
+                android:textColor="@color/coreColor"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/textminute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtMinute"
+                android:layout_centerHorizontal="true"
+                android:text="minute"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+        </RelativeLayout>
+        <!--    <TextView-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="60dp"-->
+        <!--        android:text=":"-->
+        <!--        android:textSize="45sp"-->
+        <!--        android:textColor="@color/coreColor"/>-->
+        <!--    <RelativeLayout-->
+        <!--        android:layout_width="60dp"-->
+        <!--        android:layout_height="65dp">-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/txtSecond"-->
+        <!--            android:layout_width="50dp"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            android:text="00"-->
+        <!--            android:textAlignment="center"-->
+        <!--            android:textColor="@color/coreColor"-->
+        <!--            android:textSize="40sp" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/textsecond"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@+id/txtSecond"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            android:text="second"-->
+        <!--            android:textColor="@color/black"-->
+        <!--            android:textSize="10sp" />-->
+        <!--    </RelativeLayout>-->
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/btnAddAlarm"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:checked="false"
+        android:gravity="left"
+        android:thumb="@drawable/thumbtswitch"
+        android:track="@drawable/trackswitch"
+        android:visibility="visible" />
+
+</RelativeLayout>
